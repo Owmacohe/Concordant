@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9345f1a1aa54b3bb899d93121e9c9a4, type: 3}
+  m_Name: Example Database
+  m_EditorClassIdentifier: 
+  Languages:
+  - English
+  - French
+  - Japanese
+  Entries:
+    InnerList:
+    - Key: PLAYERSTAT/HEALTH
+      Value:
+        Translations:
+          InnerList:
+          - Key: English
+            Value: Health
+          - Key: French
+            Value: "Sant\xE9"
+          - Key: Japanese
+            Value: "\u5065\u5EB7\r"
+        Context: 
+    - Key: PLAYERSTAT/AMMO
+      Value:
+        Translations:
+          InnerList:
+          - Key: English
+            Value: Ammo
+          - Key: French
+            Value: Balles
+          - Key: Japanese
+            Value: "\u5F3E\u85AC\r"
+        Context: 
+    - Key: PLAYERSTAT/STAMINA
+      Value:
+        Translations:
+          InnerList:
+          - Key: English
+            Value: Stamina
+          - Key: French
+            Value: Endurance
+          - Key: Japanese
+            Value: "\u30B9\u30BF\u30DF\u30CA\r"
+        Context: 
+    - Key: MENU/MAINMENU
+      Value:
+        Translations:
+          InnerList:
+          - Key: English
+            Value: Main Menu
+          - Key: French
+            Value: Menu principal
+          - Key: Japanese
+            Value: "\u30E1\u30A4\u30F3\u30E1\u30CB\u30E5\u30FC\r"
+        Context: 
+    - Key: MENU/SETTINGS
+      Value:
+        Translations:
+          InnerList:
+          - Key: English
+            Value: Settings
+          - Key: French
+            Value: Parametres
+          - Key: Japanese
+            Value: "\u8A2D\u5B9A\r"
+        Context: 
+    - Key: MENU/QUIT
+      Value:
+        Translations:
+          InnerList:
+          - Key: English
+            Value: Quit
+          - Key: French
+            Value: Quitter
+          - Key: Japanese
+            Value: "\u3084\u3081\u308B\r"
+        Context: 

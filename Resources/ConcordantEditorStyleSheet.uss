@@ -1,0 +1,53 @@
+.flex_row, .flex_column {
+    display: flex;
+}
+.flex_row {
+    flex-direction: row;
+    align-items: center;
+}
+.flex_column {
+    flex-direction: column;
+}
+
+.h1 {
+    margin: 10px;
+    margin-bottom: 0;
+    
+    font-size: 18px;
+}
+
+.h2 {
+    margin: 10px;
+    margin-bottom: 0;
+
+    font-size: 15px;
+}
+
+.hr {
+    height: 2px;
+    margin: 20px;
+    
+    border-radius: 2px;
+    
+    background-color: #515151;
+}
+
+.entry_even {
+    background-color: #424242;
+}
+
+.entry_odd {
+    background-color: #333333;
+}
+
+TextInput {
+    min-width: 100px;
+}
+
+TextField Label {
+    min-width: auto;
+}
+
+ConcordantEditorEntry {
+    padding: 5px;
+}

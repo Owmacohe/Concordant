@@ -1,0 +1,16 @@
+{
+    "name": "owmacohe.concordant.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:df46eed02aef44187889ad38cb70560e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

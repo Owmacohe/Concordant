@@ -1,0 +1,15 @@
+{
+  "name": "com.owmacohe.concordant",
+  "displayName": "Concordant",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "com.unity.textmeshpro": "0.0.1-security"
+  },
+  "keywords": [ ],
+  "author": {
+    "name": "Owen Hellum",
+    "email": "omch@protonmail.com",
+    "url": "https://omch.tech"
+  }
+}
