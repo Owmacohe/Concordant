@@ -1475,7 +1475,7 @@ MonoBehaviour:
   languageFonts:
     InnerList:
     - Key: Japanese
-      Value: {fileID: 11400000, guid: c410ffb02f73140278142ec9d592fdf6, type: 2}
+      Value: {fileID: 11400000, guid: 2a8f7457abbd5ce4ca3e7d4939b79ed8, type: 2}
 --- !u!4 &1342411504
 Transform:
   m_ObjectHideFlags: 0
@@ -1950,8 +1950,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -30}
-  m_SizeDelta: {x: 500, y: 300}
+  m_AnchoredPosition: {x: 0, y: -45}
+  m_SizeDelta: {x: 500, y: 275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1646105570
 MonoBehaviour:
