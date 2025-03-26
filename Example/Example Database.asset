@@ -24,7 +24,7 @@ MonoBehaviour:
           - Key: 14
             Value: "Sant\xE9"
           - Key: 22
-            Value: "\u5065\u5EB7\r"
+            Value: "\u5065\u5EB7"
         Context: 
     - Key: PLAYERSTAT/AMMO
       Value:
@@ -35,7 +35,7 @@ MonoBehaviour:
           - Key: 14
             Value: Balles
           - Key: 22
-            Value: "\u5F3E\u85AC\r"
+            Value: "\u5F3E\u85AC"
         Context: 
     - Key: PLAYERSTAT/STAMINA
       Value:
@@ -46,7 +46,7 @@ MonoBehaviour:
           - Key: 14
             Value: Endurance
           - Key: 22
-            Value: "\u30B9\u30BF\u30DF\u30CA\r"
+            Value: "\u30B9\u30BF\u30DF\u30CA"
         Context: 
     - Key: MENU/MAINMENU
       Value:
@@ -57,7 +57,7 @@ MonoBehaviour:
           - Key: 14
             Value: Menu principal
           - Key: 22
-            Value: "\u30E1\u30A4\u30F3\u30E1\u30CB\u30E5\u30FC\r"
+            Value: "\u30E1\u30A4\u30F3\u30E1\u30CB\u30E5\u30FC"
         Context: 
     - Key: MENU/SETTINGS
       Value:
@@ -68,7 +68,7 @@ MonoBehaviour:
           - Key: 14
             Value: Parametres
           - Key: 22
-            Value: "\u8A2D\u5B9A\r"
+            Value: "\u8A2D\u5B9A"
         Context: 
     - Key: MENU/QUIT
       Value:
@@ -79,5 +79,5 @@ MonoBehaviour:
           - Key: 14
             Value: Quitter
           - Key: 22
-            Value: "\u3084\u3081\u308B\r"
+            Value: "\u3084\u3081\u308B"
         Context: 

@@ -1,3 +1,14 @@
+:root {
+    --background: rgb(21, 21, 21);
+    --default: rgb(50, 50, 50);
+    --light: rgb(56, 56, 56);
+    --lighter: rgb(87, 87, 87);
+    --bright: rgb(227, 227, 227);
+    
+    --blue: #afddfa;
+    --green: #6bb38b;
+}
+
 .flex_row, .flex_column {
     display: flex;
 }
@@ -14,6 +25,7 @@
     margin-bottom: 0;
     
     font-size: 18px;
+    color: var(--green);
 }
 
 .h2 {
@@ -29,19 +41,26 @@
     
     border-radius: 2px;
     
-    background-color: #515151;
+    background-color: var(--green);
 }
 
 .entry_even {
-    background-color: #424242;
+    background-color: var(--default);
 }
 
 .entry_odd {
-    background-color: #333333;
+    background-color: var(--light);
+}
+
+TextElement {
+    font-size: 12px;
 }
 
 TextInput {
     min-width: 100px;
+    
+    color: var(--bright);
+    background-color: var(--lighter);
 }
 
 TextField Label {
@@ -50,4 +69,25 @@ TextField Label {
 
 ConcordantEditorEntry {
     padding: 5px;
+}
+
+Button {
+    color: var(--background);
+    background-color: var(--blue);
+}
+
+DropdownField VisualElement {
+    background-color: var(--blue);
+}
+
+.unity-base-popup-field__arrow {
+    -unity-background-image-tint-color: var(--background);
+}
+
+PopupTextElement {
+    color: var(--background);
+}
+
+.green {
+    color: var(--green);
 }
