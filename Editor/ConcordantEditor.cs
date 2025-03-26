@@ -32,7 +32,9 @@ namespace Concordant.Editor
             CreateDatabaseList();
             CreateInputRow();
 
-            RefreshEntries();
+            ClearEntries();
+            SetEntries(database.Entries.Keys.OrderBy(key => key).ToList());
+            RefreshEntryCount();
         }
 
         void ClearEntries()
@@ -45,13 +47,20 @@ namespace Concordant.Editor
             entries.Clear();
         }
 
-        void SetEntries(List<string> ids)
+        void SetEntries(List<string> keys)
         {
-            foreach (var i in ids)
+            foreach (var i in keys)
             {
                 var split = i.Split('/');
                 AddEntry(split[1], split[0], database.Entries.Get(i));
             }
+        }
+
+        void SetSelection(List<string> keys)
+        {
+            foreach (var i in entries.InnerList)
+                i.Value.style.display =
+                    new StyleEnum<DisplayStyle>(keys.Contains(i.Key) ? StyleKeyword.Auto : StyleKeyword.None);
         }
 
         void ClearGUI()
@@ -62,17 +71,15 @@ namespace Concordant.Editor
                 rootVisualElement.RemoveAt(0);
         }
 
-        void RefreshEntries()
+        void RefreshEntryCount()
         {
-            ClearEntries();
-            SetEntries(database.Entries.Keys.OrderBy(key => key).ToList());
             count.text = $"{database.Entries.Count} entries";
         }
 
         TextElement count;
         ConcordantEditorRow inputRow;
         ScrollView databaseList;
-        List<ConcordantEditorEntry> entries = new();
+        ListDictionary<string, ConcordantEditorEntry> entries = new();
         bool isEven;
 
         void CreateToolbar()
@@ -117,8 +124,8 @@ namespace Concordant.Editor
 
             search.RegisterValueChangedCallback(evt =>
             {
-                ClearEntries();
-                SetEntries(database.Search(evt.newValue));
+                // ClearEntries();
+                SetSelection(database.Search(evt.newValue));
             });
 
             export.clicked += () =>
@@ -163,13 +170,15 @@ namespace Concordant.Editor
             inputRow.OnAdd += (id, category, entry) =>
             {
                 AddEntry(id, category, entry);
-                RefreshEntries();
+                RefreshEntryCount();
             };
         }
 
         void AddEntry(string id, string category, ConcordantDatabaseEntry entry)
         {
             RefreshCategories();
+
+            var key = category + "/" + id;
                 
             ConcordantEditorEntry editorEntry = new ConcordantEditorEntry(
                 database,
@@ -182,23 +191,23 @@ namespace Concordant.Editor
             editorEntry.OnRemoved += () =>
             {
                 databaseList.Remove(editorEntry);
-                entries.Remove(editorEntry);
+                entries.Remove(key);
                     
                 inputRow.RefreshButton();
                 
-                RefreshEntries();
+                RefreshEntryCount();
             };
                 
             databaseList.Add(editorEntry);
-            entries.Add(editorEntry);
+            entries.Add(key, editorEntry);
         }
 
         void RefreshCategories()
         {
             inputRow.RefreshCategories();
             
-            foreach (var i in entries)
-                i.RefreshCategories();
+            foreach (var i in entries.InnerList)
+                i.Value.RefreshCategories();
         }
 
         public void Load(ConcordantDatabase database)

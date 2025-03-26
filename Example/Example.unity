@@ -1470,11 +1470,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   database: {fileID: 11400000, guid: 5ccf5c15143fd491ea5cfd61b6ef4585, type: 2}
-  language: French
+  language: 10
   defaultFont: {fileID: 11400000, guid: 5eb613b8c6e7a47f29d1549c42e92fb3, type: 2}
   languageFonts:
     InnerList:
-    - Key: Japanese
+    - Key: 22
       Value: {fileID: 11400000, guid: 2a8f7457abbd5ce4ca3e7d4939b79ed8, type: 2}
 --- !u!4 &1342411504
 Transform:

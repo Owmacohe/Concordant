@@ -24,7 +24,7 @@
 }
 
 .hr {
-    height: 2px;
+    min-height: 2px;
     margin: 20px;
     
     border-radius: 2px;
