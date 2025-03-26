@@ -2,11 +2,11 @@
   "name": "com.owmacohe.concordant",
   "displayName": "Concordant",
   "version": "1.0.0",
-  "description": "",
+  "description": "Concordant is a simple yet powerful text localization manager. Create, modify, export, and import databases of terms, sentences, or any other localizable text into any system language.",
   "dependencies": {
     "com.unity.textmeshpro": "0.0.1-security"
   },
-  "keywords": [ ],
+  "keywords": [ localization, translation, localization manager ],
   "author": {
     "name": "Owen Hellum",
     "email": "omch@protonmail.com",

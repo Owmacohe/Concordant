@@ -14,7 +14,7 @@
 
 ## Overview
 
-**Concordant** is a simple yet powerful text localization manager. Create, modify, export, and import databases of terms, sentences, or any other localizable text into any system language. In-game dialogue updates immediately, as soon as the current language is changed, for immediate hot-swapping results. **Concordant** aims to capture the core principles and features of larger localization managers, without succumbing to feature-bloat or indecipherable UIs.
+**Concordant** is a simple yet powerful text localization manager for Unity. Create, modify, export, and import databases of terms, sentences, or any other localizable text into any system language. In-game dialogue updates immediately, as soon as the current language is changed, for immediate hot-swapping results. **Concordant** aims to capture the core principles and features of larger localization managers, without succumbing to feature-bloat or indecipherable UIs.
 
 ## Installation
 
