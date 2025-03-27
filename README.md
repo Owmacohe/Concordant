@@ -31,9 +31,10 @@
    - **IDs** represent an entry's name, and **categories** represent the part of the game or UI an entry pertains to. Entries can have the same **ID**, so long as their **categories** are different, and vice versa.
    - Together, an entry's **category** and **ID** make up its **key** within the database, which is used to reference it later. A key is formatted as **CATEGORY/ID**. 
    - Once an entry has been added, its **ID** and **category** can be changed at any time, so long as it wouldn't result in a duplicate **key** in the database.
-5. Click on the **v** button to the right of the entry to expand it. From here, you can add the translation text for any of the languages you added in step 2. You can also add a context in which the term normally appears in-game, to aid translation in the future.
-6. Though the editor does perform some autosaving, don't forget to click on the **Save** button to be absolutely sure.
-7. For easier translating, you can export the entire database as a `.csv` file. Simply click on the **Export** button and choose a  file destination at which to save it. This file can then be opened in any spreadsheet software, and edited line by line.
-8. When this process is complete, click on the **Import** button and select your edited `.csv` file. All changes to translations and context fields should now appear in the database. Don't forget to **Save** after!
-9. To translate text at runtime, start by adding a `GameObject` with a `ConcordantManager` `Component` to your scene. Assign the `ConcordantDatabase` you created to the `Database` field.
-10. ...
+4. Click on the **v** button to the right of the entry to expand it. From here, you can add the translation text for any of the languages you added in step 2. You can also add a context in which the term normally appears in-game, to aid translation in the future.
+5. Though the editor does perform some autosaving, don't forget to click on the **Save** button to be absolutely sure.
+6. For easier translating, you can export the entire database as a `.csv` file. Simply click on the **Export** button and choose a  file destination at which to save it. This file can then be opened in any spreadsheet software, and edited line by line.
+7. When this process is complete, click on the **Import** button and select your edited `.csv` file. All changes to translations and context fields should now appear in the database. Don't forget to **Save** after!
+8. To translate text at runtime, start by adding a `GameObject` with a `ConcordantManager` `Component` to your scene. Assign the `ConcordantDatabase` you created to the `Database` field.
+9. You can then assign override fonts for individual languages, should your default fonts not contain their characters.
+10. Finally, add a `ConcordantTranslator` `Component` to each UI text element with a `TMP_Text` `Component` that you wish to localize. Set the `Key` field to be the full **key** of the term you wish to assign to the text.
