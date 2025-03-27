@@ -15,6 +15,8 @@ namespace Concordant.Runtime
         ConcordantManager manager; // The manager used to get translations
         TMP_Text text; // The TMP_Text Component on the GameObject
 
+        TMP_FontAsset defaultFont; // The default font for this TMP_Text
+
         void Start()
         {
             manager = FindFirstObjectByType<ConcordantManager>();
@@ -26,6 +28,7 @@ namespace Concordant.Runtime
             }
 
             text = GetComponent<TMP_Text>();
+            defaultFont = text.font;
             SetText();
 
             manager.OnRefresh += SetText; // Ensures that the text is always updated when the manager refreshes
@@ -39,7 +42,7 @@ namespace Concordant.Runtime
             if (text != null)
             {
                 text.text = manager.GetTranslation(key, out var font);
-                text.font = font;
+                text.font = font == null ? defaultFont : font;
             }
             else Debug.LogError("Error: No TMP_Text found!");
         }

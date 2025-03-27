@@ -13,8 +13,6 @@ namespace Concordant.Runtime
     {
         [SerializeField, Tooltip("The database in which the terms and their translations are stored")] ConcordantDatabase database;
 
-        [Header("Fonts")]
-        [SerializeField, Tooltip("The default font used by ConcordantTranslator Components")] TMP_FontAsset defaultFont;
         [SerializeField, Tooltip("Additional override fonts used by specific languages")] ListDictionary<SystemLanguage, TMP_FontAsset> languageFonts;
 
         SystemLanguage language; // The current language set by the game
@@ -66,9 +64,7 @@ namespace Concordant.Runtime
         {
             if (!initialized) Initialize();
             
-            // We use the default font if the current language has no override font
-            var temp = languageFonts.Get(language);
-            font = temp == null ? defaultFont : temp;
+            font = languageFonts.Get(language);
 
             if (database == null)
             {
