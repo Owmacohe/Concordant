@@ -6,7 +6,7 @@
   "dependencies": {
     "com.unity.textmeshpro": "0.0.1-security"
   },
-  "keywords": [ localization, translation, localization manager ],
+  "keywords": [ "localization", "translation", "localization manager" ],
   "author": {
     "name": "Owen Hellum",
     "email": "omch@protonmail.com",
